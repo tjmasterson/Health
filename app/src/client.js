@@ -11,12 +11,20 @@ import {Provider} from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { ReduxAsyncConnect } from 'redux-connect';
-import useScroll from 'scroll-behavior/lib/useStandardScroll';
+// import useScroll from 'scroll-behavior/lib/useStandardScroll';
+
+// TODO
+// import ScrollBehavior from 'scroll-behavior';
+// const scrollBehavior = new ScrollBehavior();
+// // After a transition:
+// scrollBehavior.updateScroll(/* prevContext, context */);
 
 import getRoutes from './routes';
 
 const client = new ApiClient();
-const _browserHistory = useScroll(() => browserHistory)();
+// TODO
+// const _browserHistory = useScroll(() => browserHistory)();
+const _browserHistory = browserHistory;
 const dest = document.getElementById('content');
 const store = createStore(_browserHistory, client, window.__data);
 const history = syncHistoryWithStore(_browserHistory, store);

@@ -67,9 +67,8 @@ module.exports = {
   entry: {
     'main': [
       'webpack-hot-middleware/client?path=http://' + host + ':' + port + '/__webpack_hmr',
-      'bootstrap-sass!./src/theme/bootstrap.config.js',
       'font-awesome-webpack!./src/theme/font-awesome.config.js',
-      './src/client.js'
+      path.resolve(__dirname, '../src/client.js')
     ]
   },
   output: {
@@ -96,7 +95,7 @@ module.exports = {
         use: [
           { loader: 'json-loader' }
         ]
-      }
+      },
       { test: /\.less$/,
         use: [
           { loader: 'style-loader' },
@@ -116,23 +115,91 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 2,
+              sourceMap: true,
+              localIdentName: '[local]___[hash:base64:5]'
+            }
+          },
+          { loader: 'postcss-loader' },
+          { loader: 'sass-loader',
+            options: {
+              outputStyle: 'expanded',
+              sourceMap: true
+            }
+          }
+        ]
+      },
+      { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          { loader: 'url-loader',
+            options: {
+              limit: 10000,
+              mimetype: 'application/font-woff'
+            }
+          }
+        ]
+      },
+      { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          { loader: 'url-loader',
+            options: {
+              limit: 10000,
+              mimetype: 'application/font-woff'
+            }
+          }
+        ]
+      },
+      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          { loader: 'url-loader',
+            options: {
+              limit: 10000,
+              mimetype: 'application/octet-stream'
+            }
+          }
+        ]
+      },
+      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          { loader: 'file-loader' }
+        ]
+      },
+      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+          use: [
+          { loader: 'url-loader',
+            options: {
+              limit: 10000,
+              mimetype: 'mimetype=image/svg+xml'
+            }
+          }
+          ]
+      },
+      { test: webpackIsomorphicToolsPlugin.regular_expression('images'),
+        use: [
+          { loader: 'url-loader',
+            options: {
+              limit: 10240
+            }
+          }
+        ]
       }
-      { test: /\.scss$/, loader: 'style!css?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded&sourceMap' },
-      { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff" },
-      { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff" },
-      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream" },
-      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
-      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml" },
-      { test: webpackIsomorphicToolsPlugin.regular_expression('images'), loader: 'url-loader?limit=10240' }
     ]
   },
-  progress: true,
+  status: true,
   resolve: {
-    modulesDirectories: [
+    modules: [
       'src',
       'node_modules'
     ],
-    extensions: ['', '.json', '.js', '.jsx']
+    extensions: ['.json', '.js', '.jsx']
   },
   plugins: [
     // hot reload
