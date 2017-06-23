@@ -1,0 +1,8 @@
+app/.idea/
+app/node_modules/
+app/dist/
+app/*.iml
+app/webpack-assets.json
+app/webpack-stats.json
+app/npm-debug.log
+app/*.swp
