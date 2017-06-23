@@ -2206,46 +2206,6 @@
 a {
   cursor: pointer;
 }
-._3VbnrvfdDzdQjwunuleXes ._2YfHs7C-iIQVg6bt828X3C {
-  margin-left: 20px;
-}
-
-._3VbnrvfdDzdQjwunuleXes ._3gXnt1S3DhQYmrCKr_zabq {
-  width: 5%;
-}
-
-._3VbnrvfdDzdQjwunuleXes ._26SGuTlEIKU7sfrSTGSfTB {
-  width: 20%;
-}
-
-._3VbnrvfdDzdQjwunuleXes .WvE6BNDtMxC3nbdpug7mK {
-  width: 20%;
-  text-align: right;
-}
-
-._3VbnrvfdDzdQjwunuleXes .WvE6BNDtMxC3nbdpug7mK input {
-  text-align: right;
-}
-
-._3VbnrvfdDzdQjwunuleXes ._1UhxOmONNOni_Yhaocn9QM {
-  width: 30%;
-}
-
-._3VbnrvfdDzdQjwunuleXes ._2BobxRq4ydkk90m_EFlwmM {
-  width: 25%;
-}
-
-._3VbnrvfdDzdQjwunuleXes ._2BobxRq4ydkk90m_EFlwmM .btn {
-  margin: 0 5px;
-}
-
-._3VbnrvfdDzdQjwunuleXes tr._1S4NAmZIcKslIw6Si7vVR5 {
-  opacity: 0.8;
-}
-
-._3VbnrvfdDzdQjwunuleXes tr._1S4NAmZIcKslIw6Si7vVR5 .btn[disabled] {
-  opacity: 1;
-}
 ._2c2S9tpXtrOV9IThPoXliQ {
   position: relative;
 }
@@ -2292,6 +2252,46 @@ a {
   position: absolute;
   left: 0;
   top: 10px;
+}
+._3VbnrvfdDzdQjwunuleXes ._2YfHs7C-iIQVg6bt828X3C {
+  margin-left: 20px;
+}
+
+._3VbnrvfdDzdQjwunuleXes ._3gXnt1S3DhQYmrCKr_zabq {
+  width: 5%;
+}
+
+._3VbnrvfdDzdQjwunuleXes ._26SGuTlEIKU7sfrSTGSfTB {
+  width: 20%;
+}
+
+._3VbnrvfdDzdQjwunuleXes .WvE6BNDtMxC3nbdpug7mK {
+  width: 20%;
+  text-align: right;
+}
+
+._3VbnrvfdDzdQjwunuleXes .WvE6BNDtMxC3nbdpug7mK input {
+  text-align: right;
+}
+
+._3VbnrvfdDzdQjwunuleXes ._1UhxOmONNOni_Yhaocn9QM {
+  width: 30%;
+}
+
+._3VbnrvfdDzdQjwunuleXes ._2BobxRq4ydkk90m_EFlwmM {
+  width: 25%;
+}
+
+._3VbnrvfdDzdQjwunuleXes ._2BobxRq4ydkk90m_EFlwmM .btn {
+  margin: 0 5px;
+}
+
+._3VbnrvfdDzdQjwunuleXes tr._1S4NAmZIcKslIw6Si7vVR5 {
+  opacity: 0.8;
+}
+
+._3VbnrvfdDzdQjwunuleXes tr._1S4NAmZIcKslIw6Si7vVR5 .btn[disabled] {
+  opacity: 1;
 }
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -3402,6 +3402,13 @@ table._1NIQtNmB3SXD-FiPfE9N-9 th, table._1NIQtNmB3SXD-FiPfE9N-9 td {
     padding: 1rem;
   }
 }
+._1lCH-MBfZj1fnt4rCagS0w {
+  font-variant: italics;
+}
+
+.vX6YJOTmo08GoFXLDXEuE {
+  margin: 0 30px;
+}
 ._29OrYvfMUhaO3hHqqWg6A_ input {
   padding: 5px 10px;
   border-radius: 5px;
@@ -3414,13 +3421,6 @@ table._1NIQtNmB3SXD-FiPfE9N-9 th, table._1NIQtNmB3SXD-FiPfE9N-9 td {
 
 ._29OrYvfMUhaO3hHqqWg6A_ form .btn {
   margin-left: 10px;
-}
-._1lCH-MBfZj1fnt4rCagS0w {
-  font-variant: italics;
-}
-
-.vX6YJOTmo08GoFXLDXEuE {
-  margin: 0 30px;
 }
 .VbTsuUx0PAiE6mb0gQYwJ input {
   padding: 5px 10px;
